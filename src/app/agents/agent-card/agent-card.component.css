@@ -1,0 +1,32 @@
+#card {
+  display: block;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0 grey;
+}
+
+#card:hover {
+  box-shadow: 5px 5px 10px 0 #575555;
+  cursor: pointer;
+}
+
+.card-header {
+  font-size: 18px;
+  font-family: C059, cursive;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card-body {
+  margin: 0;
+  padding: 5px 5px 0 5px;
+
+  img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}

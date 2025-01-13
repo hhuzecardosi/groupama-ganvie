@@ -1,0 +1,80 @@
+
+.body {
+
+}
+
+.upper-card {
+  display: block;
+  margin: auto auto 50px;
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0 grey;
+  max-height: 500px;
+}
+
+h4 {
+  font-family: C059, cursive;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#mission {
+  font-family: C059, cursive;
+
+  p {
+    text-align: justify;
+    padding: 5px 5px 0 5px;
+    word-break: break-word;
+  }
+}
+
+#car {
+  .card-body {
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0 grey inset;
+
+    margin-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5%;
+
+    height: 200px;
+    overflow: auto;
+
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: start;
+
+  }
+
+  .lower-card:hover {
+    box-shadow: 5px 5px 10px 0 #575555;
+    cursor: pointer;
+  }
+
+  .card-footer {
+    margin-top: 15px;
+    display: flex;
+
+    #add-report {
+      margin-left: auto;
+      margin-right: 15px;
+    }
+  }
+
+}
+
+.card-body {
+}
+
+.lower-card {
+  width: 450px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0 grey;
+}

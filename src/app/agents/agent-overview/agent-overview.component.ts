@@ -25,7 +25,6 @@ export class AgentOverviewComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.agentId = params['id'];
       this.store.getAgentAllInfo(this.agentId).then((info) => {
-        console.log(info);
         this.agent = info.agent || {} as Agents;
         this.mission = info.mission || {} as Missions;
         this.reports = info.reports || [];

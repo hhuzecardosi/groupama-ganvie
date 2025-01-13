@@ -3,6 +3,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {AgentsStore} from '../../store/agents.store';
 import {Agents} from '../agents.model';
 import {Missions} from '../../missions/missions.model';
+import {MatDialog} from '@angular/material/dialog';
+import {ReportsComponent} from '../../reports/reports.component';
 
 @Component({
   selector: 'app-agent-overview',
@@ -12,6 +14,8 @@ import {Missions} from '../../missions/missions.model';
   styleUrl: './agent-overview.component.css'
 })
 export class AgentOverviewComponent implements OnInit {
+  readonly dialog = inject(MatDialog);
+
   private store = inject(AgentsStore);
 
   agentId!: string;
@@ -30,5 +34,9 @@ export class AgentOverviewComponent implements OnInit {
         this.reports = info.reports || [];
       });
     });
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ReportsComponent, {});
   }
 }

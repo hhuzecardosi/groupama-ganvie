@@ -1,6 +1,6 @@
 import {effect, inject} from '@angular/core';
 import {getState, patchState, signalStore, withHooks, withMethods, withState} from '@ngrx/signals';
-import {catchError, firstValueFrom, of, take} from 'rxjs';
+import {catchError, firstValueFrom, of } from 'rxjs';
 
 import {Agents} from '../agents/agents.model';
 import {MockAgentsService} from '../agents/agents.service';

@@ -1,17 +1,17 @@
 <div class="header">
-  <h1 id="#title">{{agent?.codeName}}</h1>
+  <h1 id="#title">{{agent.codeName}}</h1>
 </div>
 <div class="body">
   <div id="mission" class="upper-card">
     <h4>Récapitulatif de la Mission</h4>
-    <p id="recap">{{mission?.text}}</p>
+    <p id="recap">{{mission.text}}</p>
   </div>
   <div id="car" class="upper-card">
     <div class="card-header">
       <h4>Comptes Rendus d'Activité</h4>
     </div>
     <div class="card-body">
-      <div class="lower-card">Date 1</div>
+      <div (click)="openDialog()" class="lower-card">Date 1</div>
       <div class="lower-card">Date 2</div>
       <div class="lower-card">Date 3</div>
       <div class="lower-card">Date 4</div>

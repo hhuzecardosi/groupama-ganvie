@@ -9,6 +9,7 @@ import {AgentsStore} from '../../store/agents.store';
     NgForOf,
     AgentCardComponent
   ],
+  providers: [AgentsStore],
   templateUrl: './agents-list.component.html',
   styleUrl: './agents-list.component.css'
 })

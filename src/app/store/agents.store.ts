@@ -1,6 +1,6 @@
 import {effect, inject} from '@angular/core';
 import {getState, patchState, signalStore, withHooks, withMethods, withState} from '@ngrx/signals';
-import {catchError, of} from 'rxjs';
+import {catchError, firstValueFrom, of, take} from 'rxjs';
 
 import {Agents} from '../agents/agents.model';
 import {MockAgentsService} from '../agents/agents.service';
@@ -27,6 +27,13 @@ export const AgentsStore = signalStore(
     getAgents: () => getState(store).agents,
     getMissionById(id: string) {
       return missionService.getMissionById(id);
+    },
+    async getAgentAllInfo(id: string) {
+      return {
+        agent: getState(store).agents.find(agent => agent.id === id),
+        mission: await firstValueFrom(missionService.getMissionById(id)),
+        reports: []
+      }
     }
   })),
   withHooks({

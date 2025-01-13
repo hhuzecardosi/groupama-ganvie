@@ -32,8 +32,8 @@ export class MockMissionsService {
     }
   ]
 
-  getMissionById(id: string): Observable<Missions | {}> {
-    return of(this.MOCK_DATA.find(mission => mission.id === id) || {});
+  getMissionById(id: string): Observable<Missions | undefined> {
+    return of(this.MOCK_DATA.find(mission => mission.id === id));
   }
 
 }

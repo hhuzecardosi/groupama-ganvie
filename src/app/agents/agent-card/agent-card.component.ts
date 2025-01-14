@@ -21,7 +21,7 @@ export class AgentCardComponent {
     this.router.navigate(['/agent/', this.agent.id])
       .then(() => {},
         error => {
-        console.error(`Error navigating to agent ${this.agent.id}, error: ${error}`);
+        console.error(`Error navigating to agent ${this.agent?.id}, error: ${error}`);
         });
   };
 }

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Router } from '@angular/router';
-import { of } from 'rxjs';
+import {firstValueFrom, of} from 'rxjs';
 import { AgentOverviewComponent } from './agent-overview.component';
 import { AgentsStore } from '../../store/agents.store';
 
@@ -49,6 +49,6 @@ describe('AgentOverviewComponent', () => {
     expect(component.agentId).toBe('1');
     expect(component.agent.id).toEqual(mockAgentInfo.agent.id);
     expect(component.mission.id).toEqual(mockAgentInfo.mission.id);
-    expect(component.reports.length).toEqual(mockAgentInfo.reports.length);
+    expect((await firstValueFrom(component.reports$)).length).toEqual(3);
   });
 });
